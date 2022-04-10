@@ -1,0 +1,34 @@
+body {
+    background-color: gray;
+    background-image: url(./imges/backgroundimgeHome.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.facebookStyle {
+    position: absolute;
+    left: 20px;
+}
+
+.instegramStyle {
+    position: absolute;
+    left: 50px;
+}
+
+#fontAboutText {
+    font-size: 3rem;
+}
+
+#fontsizeTextHome {
+    font-size: 3rem;
+}
+
+#SearchStyle:hover {
+    background-color: rgb(135, 179, 241) !important;
+}
+
+#basic-addon1:hover {
+    background-color: rgb(198, 198, 201) !important;
+
+}

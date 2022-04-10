@@ -1,0 +1,71 @@
+@local=http://localhost:3000
+
+POST {{local}}/api/users
+Content-Type: application/json
+
+{
+    "name": "snir2222",
+    "password": "12345623922",
+    "email": "ayahavmdan123402627@gmail.com",
+    "biz": "true"
+}
+
+### login
+
+POST {{local}}/api/auth
+Content-Type: application/json
+
+{
+    "email": "ayahavmdan123402627@gmail.com",
+    "password": "12345623922"
+}
+
+
+### me
+
+GET {{local}}/api/users/me
+x-auth-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQxZDNmNWUyNTc5NzU1MzU0MWEwNzEiLCJiaXoiOnRydWUsImlhdCI6MTY0MTE0MTI5OX0.UOiQKtyXS2S-uEKX6H7r_fLPJpyPJBLzPWGyu4Yrdfk
+
+
+### create card
+POST {{local}}/api/cards
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQxZTQ3ODFkZGQzMGEzMzRlNzUzODciLCJiaXoiOnRydWUsImlhdCI6MTY0MTE5NDI0MH0.D_fpWjlvp6C5UOLCVN2Wefdn5HOlzD2cM2NlEdZI8GE
+Content-Type: application/json
+
+{
+    "bizName": "Lemons to all 1",
+    "bizDescription": "Lemonade from lemons 1",
+    "bizAddress": "Lemonade Av. 1",
+    "bizPhone": "075547878",
+    "bizImage": "https://cdn.pixabay.com/photo/2020/12/01/10/04/dog-5793625_960_720.jpg"
+}
+### get card by id
+GET {{local}}/api/cards/61d1d4452f2e03221b1dad2a
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQxZDNmNWUyNTc5NzU1MzU0MWEwNzEiLCJiaXoiOnRydWUsImlhdCI6MTY0MTE0MTI5OX0.UOiQKtyXS2S-uEKX6H7r_fLPJpyPJBLzPWGyu4Yrdfk
+
+### update card
+PUT {{local}}/api/cards/61d1b2de3d9baa576861e0cc
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQxYjE3MTNkOWJhYTU3Njg2MWUwYzMiLCJiaXoiOnRydWUsImlhdCI6MTY0MTEzMjcyOX0.w7GfIp9QwOj-V11vmIWf5dgZCb6raXRPxlOsCDdUvrQ
+Content-Type: application/json
+
+{
+    "bizName": "Lemons to all 3",
+    "bizDescription": "Lemonade from lemons 3",
+    "bizAddress": "Lemonade Av. 3",
+    "bizPhone": "062547878",
+    "bizImage": "https://cdn.pixabay.com/photo/2021/12/19/10/42/old-6880626_1280.jpg"
+}
+
+### delete card
+DELETE {{local}}/api/cards/61d1d4452f2e03221b1dad2a
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQxYjE3MTNkOWJhYTU3Njg2MWUwYzMiLCJiaXoiOnRydWUsImlhdCI6MTY0MTEzMjcyOX0.w7GfIp9QwOj-V11vmIWf5dgZCb6raXRPxlOsCDdUvrQ
+
+
+### Access point
+GET {{local}}/api/cardAll
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQxZTQ3ODFkZGQzMGEzMzRlNzUzODciLCJiaXoiOnRydWUsImlhdCI6MTY0MTE5NDI0MH0.D_fpWjlvp6C5UOLCVN2Wefdn5HOlzD2cM2NlEdZI8GE
+Content-Type: application/json
+
+
+
+
